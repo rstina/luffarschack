@@ -1,0 +1,96 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #61b9a9;
+  background-image: linear-gradient(to right, #78d2c2 , #8cbd6e);
+  color: rgb(248, 255, 246);
+  font-weight: 500;
+  min-width: 750px;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  display: block;
+  color: #61b9a9;
+  font-size: 14px;
+  padding: 5px;
+  margin: 15px;
+}
+
+article {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+.board15{
+  width: 400px;
+}
+
+.board20{
+  width: 525px;
+}
+
+.board25{
+  width: 650px;
+}
+
+.board30{
+  width: 775px;
+}
+
+form {
+  margin-top: 35px;
+}
+
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+button {
+  background-color: rgb(243, 252, 241);
+  color: rgb(237, 253, 230);
+  border: 1px solid #81cbaa;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+button.markerA {
+  color: #61b9a9;
+}
+
+button.markerB {
+  color: #91c471;
+}
+
+button.win {
+  color: rgb(243, 252, 241);
+  background-color: rgb(192, 122, 226);
+}
+
+div.winner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(97, 185, 169, 0.8);
+  z-index: 1;
+  text-align: center;
+  margin-top: -20px;
+  padding-top: 15%;
+  font-size: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+button.grid-size {
+  color: #61b9a9;
+  font-size: 13px;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 1px solid #61b9a9;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luffarschack</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600|Roboto:300,400,500,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+</head>
+<body>
+  <div id="winner" class="hide"><h1>Grattis du vann!</h1></div>
+  <article>
+    <h1>Luffarschack</h1>
+    <div id="getPlayerNames">
+      <form>
+  	    <h3>Ange namn på spelare</h3>
+          <input type="text" name="playerA" value="Spelare A"/>
+          <input type="text" name="playerB" value="Spelare B"/>
+          <input type="button" value="Skicka in" id="submitButton" />
+      </form>
+		</div>
+    <div id="getBoardSize" class="hide">
+      <h3>Hur stort bräde vill ni ha?</h3>
+		</div>
+    <div id="gamePlayerInfo">
+			<h2 id="congrats" class="hide">Grattis!</h2>
+			<p id="whosPlaying"></p>
+      <p id="turn"></p>
+		</div>
+    <div id="gameBoard" class="hide"></div>
+    <div id="activePlayer" class="hide">
+      <p id="activePlayer1"></p>
+      <p id="activePlayer2"></p>
+    </div>
+  </article>
+  <script type="application/javascript" src="main.js"></script>
+</body>
+</html>
