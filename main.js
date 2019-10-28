@@ -176,6 +176,9 @@ function checkCond(cond1,cond2,cond3,cond4,cond5) {
     addWinStyle(cond1,cond2,cond3,cond4,cond5)
   }
 }
+
+"x:0y:0"
+
 function checkRow(size) {
   for(let i = 0; i < size; i++){
     for(let j = 0; j < size-4; j++){
