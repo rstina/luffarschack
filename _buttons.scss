@@ -1,0 +1,34 @@
+button {
+  background-color: $color--light;
+  color: $color--light;
+  border: 1px solid $color--accentDark2;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 15px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+button.markerA {
+  color: $color--mainDark;
+}
+
+button.markerB {
+  color: $color--accentDark;
+}
+
+button.win {
+  color: r$color--light;
+  background-color: $color--accent;
+}
+
+button.grid-size {
+  color: $color--mainDark;
+  font-size: 13px;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 1px solid $color--mainDark;
+}

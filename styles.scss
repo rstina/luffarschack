@@ -1,4 +1,7 @@
 @import 'variables';
+@import 'buttons';
+@import 'inputs';
+@import 'board';
 
 body {
   color: $color--accentLight;
@@ -16,84 +19,11 @@ h1, h2, h3 {
   font-family: 'Raleway', sans-serif;
 }
 
-input {
-  color: $color--mainDark;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: block;
-  padding: 10px;
-  margin: 15px 0;
-  border: 1px solid $color--mainDark;
-  box-shadow: 2px 2px 4px rgba($color: #a1a1a1, $alpha: 0.4);
-}
-
-input[type=submit] {
-  color: $color--accentLight;
-  background-color: $color--accent;
-  padding: 10px 25px;
-  &:hover {
-    background-color: $color--accentDarker;
-    cursor: pointer;
-  }
-}
-
 article {
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
+  // width: 300px;
   justify-content: center;
-}
-
-.board15{
-  width: 400px;
-}
-
-.board20{
-  width: 525px;
-}
-
-.board25{
-  width: 650px;
-}
-
-.board30{
-  width: 775px;
-}
-
-button {
-  background-color: $color--light;
-  color: $color--light;
-  border: 1px solid $color--accentDark2;
-  width: 25px;
-  height: 25px;
-  padding: 0;
-  font-weight: 700;
-  font-size: 15px;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-button.markerA {
-  color: $color--mainDark;
-}
-
-button.markerB {
-  color: $color--accentDark;
-}
-
-button.win {
-  color: r$color--light;
-  background-color: $color--accent;
-}
-
-button.grid-size {
-  color: $color--mainDark;
-  font-size: 13px;
-  margin-right: 5px;
-  border-radius: 50%;
-  border: 1px solid $color--mainDark;
 }
 
 div.winner {
