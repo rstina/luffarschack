@@ -1,25 +1,42 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  color: #f8fff6;
   background-color: #61b9a9;
   background-image: -webkit-gradient(linear, left top, right top, from(#78d2c2), to(#8cbd6e));
   background-image: linear-gradient(to right, #78d2c2, #8cbd6e);
-  color: #f8fff6;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  letter-spacing: 1px;
   min-width: 750px;
   margin: 0;
   padding: 0;
 }
 
-input {
-  display: block;
-  color: #61b9a9;
-  font-size: 14px;
-  padding: 5px;
-  margin: 15px;
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif;
 }
 
-.getPlayerNames {
-  border: 2px solid green;
+input {
+  color: #61b9a9;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: block;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #61b9a9;
+  -webkit-box-shadow: 2px 2px 4px rgba(161, 161, 161, 0.4);
+          box-shadow: 2px 2px 4px rgba(161, 161, 161, 0.4);
+}
+
+input[type=submit] {
+  color: #f8fff6;
+  background-color: #b154ce;
+  padding: 10px 25px;
+}
+
+input[type=submit]:hover {
+  background-color: #9d44b8;
+  cursor: pointer;
 }
 
 article {
@@ -47,14 +64,6 @@ article {
   width: 775px;
 }
 
-form {
-  margin-top: 35px;
-}
-
-h1, h2, h3 {
-  font-family: 'Raleway', sans-serif;
-}
-
 button {
   background-color: #f3fcf1;
   color: #f3fcf1;
@@ -64,6 +73,10 @@ button {
   padding: 0;
   font-weight: 700;
   font-size: 15px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 button.markerA {
@@ -76,7 +89,7 @@ button.markerB {
 
 button.win {
   color: r #f3fcf1;
-  background-color: #c07ae2;
+  background-color: #b154ce;
 }
 
 button.grid-size {
@@ -95,7 +108,7 @@ div.winner {
   z-index: 1;
   text-align: center;
   margin-top: -20px;
-  padding-top: 15%;
+  padding-top: 33%;
   font-size: 100%;
   cursor: pointer;
 }
