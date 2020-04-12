@@ -1,14 +1,19 @@
-let body = document.querySelector('body')
-let article = document.querySelector('article')
-let getPlayerNames = document.getElementById('getPlayerNames')
-let getBoardSize = document.getElementById('getBoardSize')
-let gameBoard = document.getElementById('gameBoard')
-let activePlayer = document.getElementById('activePlayer')
+
+// get elements from DOM
+const body = document.querySelector('body')
+const article = document.querySelector('article')
+const getPlayerNames = document.getElementById('getPlayerNames')
+const getBoardSize = document.getElementById('getBoardSize')
+const gameBoard = document.getElementById('gameBoard')
+const activePlayer = document.getElementById('activePlayer')
+
+// player info
 let playerA = { name: 'Spelare A', starts: true, marker: 'x'}
 let playerB = { name: 'Spelare B', starts: false , marker: 'o'}
 let size
 let board = []
 let counter = 0
+
 getPlayerInfo()
 getGameSize()
 function createBoard() {
@@ -69,7 +74,9 @@ function createBoard() {
   }
 }
 
+// game board size
 function getGameSize() {
+  // get info from user to fill boradSize
   let boardSize = []
   for(let i = 10; i <= 30; i = i + 5){
     boardSize[i] = document.createElement('button') 
@@ -90,12 +97,16 @@ function getGameSize() {
         break;        
       }
       createBoard()
+      // show game board and player info
       document.getElementById('gameBoard').classList.remove('hide')
       document.getElementById('activePlayer').classList.remove('hide')
+      // remove board and size question
       document.getElementById('getBoardSize').classList.add('hide')
     })
   }  
 }
+
+// get player info from user
 function getPlayerInfo() {
   if(random1or0() === 0){ 
     playerA.starts = false
@@ -105,23 +116,28 @@ function getPlayerInfo() {
     playerA.marker = 'o'
     playerB.marker = 'x' 
   }
-  document.getElementById('submitButton').addEventListener('click',function(){
+  document.getElementById('formNames').addEventListener('submit',function(e){
+    e.preventDefault()
     playerA.name = document.getElementsByName('playerA')[0].value
     playerB.name = document.getElementsByName('playerB')[0].value
     document.getElementById('getPlayerNames').classList.add('hide')
     document.getElementById('getBoardSize').classList.remove('hide')
   })
 }
+
+// randomize number 1 or 0
 function random1or0() {
   let randomNumber
   let condition = true
-    while(condition){
-      randomNumber = Math.floor(Math.random()*10)
-      if(randomNumber === 0 || randomNumber === 1){
-        return randomNumber
-      }
-    } 
+  while(condition){
+    randomNumber = Math.floor(Math.random()*10)
+    if(randomNumber === 0 || randomNumber === 1){
+      return randomNumber
+    }
+  } 
 }
+
+// winning condition
 function checkCond(cond1,cond2,cond3,cond4,cond5) {
   if(document.getElementById(cond1).innerHTML === 'o' &&
   document.getElementById(cond2).innerHTML === 'o' &&
@@ -147,6 +163,9 @@ function checkCond(cond1,cond2,cond3,cond4,cond5) {
     document.getElementById('whosPlaying').classList.add('hide')
     document.getElementById('winner').classList.add('winner')
     document.getElementById('winner').classList.remove('hide')
+    document.getElementById('winner').addEventListener('click',function () {
+      location.reload();
+    })
     addWinStyle(cond1,cond2,cond3,cond4,cond5)
   }
   else if(document.getElementById(cond1).innerHTML === 'x' &&
@@ -173,11 +192,12 @@ function checkCond(cond1,cond2,cond3,cond4,cond5) {
     document.getElementById('whosPlaying').classList.add('hide')
     document.getElementById('winner').classList.add('winner')
     document.getElementById('winner').classList.remove('hide')
+    document.getElementById('winner').addEventListener('click',function () {
+      location.reload();
+    })
     addWinStyle(cond1,cond2,cond3,cond4,cond5)
   }
 }
-
-"x:0y:0"
 
 function checkRow(size) {
   for(let i = 0; i < size; i++){

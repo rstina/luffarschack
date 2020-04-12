@@ -1,18 +1,19 @@
+@import 'variables';
+
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #61b9a9;
-  background-image: -webkit-gradient(linear, left top, right top, from(#78d2c2), to(#8cbd6e));
-  background-image: linear-gradient(to right, #78d2c2, #8cbd6e);
-  color: #f8fff6;
+  background-color: $color--mainDark;
+  background-image: linear-gradient(to right, $color--accent1 , $color--accent2);
+  color: $color--accentLight;
   font-weight: 500;
-  min-width: 750px;
+  min-width: 750px; 
   margin: 0;
   padding: 0;
 }
 
 input {
   display: block;
-  color: #61b9a9;
+  color: $color--mainDark;
   font-size: 14px;
   padding: 5px;
   margin: 15px;
@@ -26,24 +27,22 @@ article {
   margin-left: auto;
   margin-right: auto;
   width: 300px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
-.board15 {
+.board15{
   width: 400px;
 }
 
-.board20 {
+.board20{
   width: 525px;
 }
 
-.board25 {
+.board25{
   width: 650px;
 }
 
-.board30 {
+.board30{
   width: 775px;
 }
 
@@ -56,9 +55,9 @@ h1, h2, h3 {
 }
 
 button {
-  background-color: #f3fcf1;
-  color: #f3fcf1;
-  border: 1px solid #81cbaa;
+  background-color: $color--light;
+  color: $color--light;
+  border: 1px solid $color--accentDark2;
   width: 25px;
   height: 25px;
   padding: 0;
@@ -67,31 +66,31 @@ button {
 }
 
 button.markerA {
-  color: #61b9a9;
+  color: $color--mainDark;
 }
 
 button.markerB {
-  color: #91c471;
+  color: $color--accentDark;
 }
 
 button.win {
-  color: r #f3fcf1;
-  background-color: #c07ae2;
+  color: r$color--light;
+  background-color: $color--accent;
 }
 
 button.grid-size {
-  color: #61b9a9;
+  color: $color--mainDark;
   font-size: 13px;
   margin-right: 5px;
   border-radius: 50%;
-  border: 1px solid #61b9a9;
+  border: 1px solid $color--mainDark;
 }
 
 div.winner {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(97, 185, 169, 0.8);
+  background-color: $color--mainDark-opacity;
   z-index: 1;
   text-align: center;
   margin-top: -20px;
@@ -103,4 +102,3 @@ div.winner {
 .hide {
   display: none;
 }
-/*# sourceMappingURL=styles.css.map */
