@@ -1,11 +1,21 @@
+// color
 $color--mainDark: #61b9a9;
 $color--mainDark-opacity: rgba(97, 185, 169, 0.8);
 $color--accent: rgb(177, 84, 206);
 $color--accentDarker: rgb(157, 68, 184);
 $color--light: rgb(243, 252, 241);
-$color--lightest: rgb(237, 253, 230);
+$color--lightest: #edfde6;
 $color--accentLight: rgb(248, 255, 246);
 $color--accentDark: #91c471;
 $color--accentDark2: #81cbaa;
 $color--accent1: #78d2c2;
 $color--accent2: #8cbd6e;
+
+// type
+$font--headings: 'Raleway', sans-serif;
+$font--main: 'Roboto', sans-serif;
+
+// size
+$size--mobile: 500px;
+$size--note: 800px;
+$size--desktop: 1000px;

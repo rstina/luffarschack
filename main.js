@@ -5,6 +5,7 @@ const article = document.querySelector('article')
 const getPlayerNames = document.getElementById('getPlayerNames')
 const getBoardSize = document.getElementById('getBoardSize')
 const gameBoard = document.getElementById('gameBoard')
+gameBoard.classList.add('gameBoardStyle')
 const activePlayer = document.getElementById('activePlayer')
 
 // player info
@@ -15,13 +16,31 @@ let board = []
 let counter = 0
 
 getPlayerInfo()
-getGameSize()
+
 function createBoard() {
+
+  let windowWith = window.innerWidth;
+  let boardLimit
+
+  if(windowWith <= 500){
+    boardLimit = 10
+  } else if(windowWith <= 800 && windowWith > 500){
+    boardLimit = 10
+  } else if(windowWith <= 1200 && windowWith > 800) {
+    boardLimit = 15
+  } else if(windowWith > 1200) {
+    boardLimit = 25
+  } else boardLimit = 10
+
+  size = boardLimit
+
   for(let i = 0; i < size; i++){
     board[i] = [] 
     for(let j = 0; j < size; j++){
       board[i][j] = document.createElement('button') 
       board[i][j].id = 'id'+i+'-'+j
+      board[i][j].classList.add('btn'+size)
+      board[i][j].classList.add('gameBtn')
       board[i][j].textContent = 'z'
       gameBoard.appendChild(board[i][j])
       if( (j+1) % size === 0 ){
@@ -74,40 +93,9 @@ function createBoard() {
   }
 }
 
-// game board size
-function getGameSize() {
-  // get info from user to fill boradSize
-  let boardSize = []
-  for(let i = 10; i <= 30; i = i + 5){
-    boardSize[i] = document.createElement('button') 
-    boardSize[i].id = 'size'+i
-    boardSize[i].innerHTML = i
-    boardSize[i].classList.add('grid-size')
-    getBoardSize.appendChild(boardSize[i])
-    boardSize[i].addEventListener('click',function(){
-      size = event.currentTarget.innerHTML
-      switch(size){
-        case '15': document.querySelector('article').classList.add('board15')
-        break;
-        case '20': document.querySelector('article').classList.add('board20')
-        break;
-        case '25': document.querySelector('article').classList.add('board25')
-        break;
-        case '30': document.querySelector('article').classList.add('board30')
-        break;        
-      }
-      createBoard()
-      // show game board and player info
-      document.getElementById('gameBoard').classList.remove('hide')
-      document.getElementById('activePlayer').classList.remove('hide')
-      // remove board and size question
-      document.getElementById('getBoardSize').classList.add('hide')
-    })
-  }  
-}
-
 // get player info from user
 function getPlayerInfo() {
+  console.log(window.innerWidth)
   if(random1or0() === 0){ 
     playerA.starts = false
     playerB.starts = true
@@ -121,7 +109,8 @@ function getPlayerInfo() {
     playerA.name = document.getElementsByName('playerA')[0].value
     playerB.name = document.getElementsByName('playerB')[0].value
     document.getElementById('getPlayerNames').classList.add('hide')
-    document.getElementById('getBoardSize').classList.remove('hide')
+    document.getElementById('gameBoard').classList.remove('hide')
+    createBoard()
   })
 }
 

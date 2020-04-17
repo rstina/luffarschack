@@ -1,16 +1,46 @@
 button {
-  background-color: #f3fcf1;
-  color: #f3fcf1;
-  border: 1px solid #81cbaa;
-  width: 25px;
-  height: 25px;
   padding: 0;
   font-weight: 700;
-  font-size: 15px;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+.gameBtn {
+  background-color: #f3fcf1;
+  color: #f3fcf1;
+  border: 1px solid #81cbaa;
+  width: 8vw;
+  height: 8vw;
+  font-size: 4.5vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .gameBtn {
+    width: 6vw;
+    height: 6vw;
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .gameBtn {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .gameBtn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+  }
 }
 
 button.markerA {
@@ -28,96 +58,86 @@ button.win {
 
 button.grid-size {
   color: #61b9a9;
-  font-size: 13px;
-  margin-right: 5px;
+  margin-right: 2rem;
   border-radius: 50%;
   border: 1px solid #61b9a9;
+  width: 12vw;
+  height: 12vw;
+  font-size: 6vw;
 }
 
-button {
-  background-color: #f3fcf1;
-  color: #f3fcf1;
-  border: 1px solid #81cbaa;
-  width: 25px;
-  height: 25px;
-  padding: 0;
-  font-weight: 700;
-  font-size: 15px;
+@media only screen and (min-width: 500px) {
+  button.grid-size {
+    width: 10vw;
+    height: 10vw;
+    font-size: 5vw;
+  }
 }
 
-button:hover {
-  cursor: pointer;
+@media only screen and (min-width: 800px) {
+  button.grid-size {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
 }
 
-button.markerA {
-  color: #61b9a9;
+@media only screen and (min-width: 1000px) {
+  button.grid-size {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
 }
 
-button.markerB {
-  color: #91c471;
-}
-
-button.win {
-  color: r #f3fcf1;
-  background-color: #b154ce;
-}
-
-button.grid-size {
-  color: #61b9a9;
-  font-size: 13px;
-  margin-right: 5px;
-  border-radius: 50%;
-  border: 1px solid #61b9a9;
-}
-
-body {
-  color: #f8fff6;
-  background-color: #61b9a9;
-  background-image: -webkit-gradient(linear, left top, right top, from(#78d2c2), to(#8cbd6e));
-  background-image: linear-gradient(to right, #78d2c2, #8cbd6e);
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  letter-spacing: 1px;
-  min-width: 750px;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3 {
-  font-family: 'Raleway', sans-serif;
+.playerGetNames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
 }
 
 input {
   color: #61b9a9;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  background: #f8fff6;
+  font-family: "Roboto", sans-serif;
+  font-size: 4vw;
   letter-spacing: 1px;
   display: block;
-  padding: 10px;
-  margin: 15px 0;
+  padding: 1rem;
+  margin: 1.5rem 0;
   border: 1px solid #61b9a9;
   -webkit-box-shadow: 2px 2px 4px rgba(161, 161, 161, 0.4);
           box-shadow: 2px 2px 4px rgba(161, 161, 161, 0.4);
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (min-width: 500px) {
+  input {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  input {
+    font-size: 1rem;
+    color: #61b9a9;
+  }
 }
 
 input[type=submit] {
   color: #f8fff6;
   background-color: #b154ce;
-  padding: 10px 25px;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 input[type=submit]:hover {
   background-color: #9d44b8;
   cursor: pointer;
-}
-
-article {
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .board15 {
@@ -136,6 +156,54 @@ article {
   width: 775px;
 }
 
+.board15, .board20, .board25, .board30 {
+  width: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #f8fff6;
+  background-color: #61b9a9;
+  background-image: -webkit-gradient(linear, left top, right top, from(#78d2c2), to(#8cbd6e));
+  background-image: linear-gradient(to right, #78d2c2, #8cbd6e);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 4vw;
+  letter-spacing: 1px;
+  width: 100%;
+  margin: 0;
+}
+
+@media only screen and (min-width: 500px) {
+  body {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+article {
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 div.winner {
   position: absolute;
   width: 100%;
@@ -143,8 +211,7 @@ div.winner {
   background-color: rgba(97, 185, 169, 0.8);
   z-index: 1;
   text-align: center;
-  margin-top: -20px;
-  padding-top: 33%;
+  padding-top: 45%;
   font-size: 100%;
   cursor: pointer;
 }

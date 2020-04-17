@@ -1,0 +1,39 @@
+.playerGetNames {
+  display: flex;
+  padding: 1rem;
+}
+
+input {
+  color: $color--mainDark;
+  background: $color--accentLight;
+  font-family: $font--main;
+  font-size: 4vw;
+  letter-spacing: 1px;
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border: 1px solid $color--mainDark;
+  box-shadow: 2px 2px 4px rgba($color: #a1a1a1, $alpha: 0.4);
+  width: 100%;
+  box-sizing: border-box;
+  @media only screen and (min-width: $size--mobile){
+    font-size: 3vw;
+  }
+  @media only screen and (min-width: $size--note){
+    font-size: 1rem;
+    color: $color--mainDark;
+  }
+ 
+}
+
+input[type=submit] {
+  color: $color--accentLight;
+  background-color: $color--accent;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  &:hover {
+    background-color: $color--accentDarker;
+    cursor: pointer;
+  }
+}
